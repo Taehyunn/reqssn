@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@font-face { 
+  font-family:'SpoqaHanSans'; 
+  font-style: normal; 
+  font-display: swap;
+  font-weight: 200;
+  src: url("font/SpoqaHanSans/SpoqaHanSansNeoL.eot");
+  src: url("font/SpoqaHanSans/SpoqaHanSansNeoL.eot?#iefix") format('embedded-opentype'),
+       url("font/SpoqaHanSans/SpoqaHanSansNeoL.woff2") format('woff2'),
+       url("font/SpoqaHanSans/SpoqaHanSansNeoL.woff") format('woff'), 
+       url("font/SpoqaHanSans/SpoqaHanSansNeoL.ttf") format('truetype'); 
+} 
+@font-face { 
+  font-family:'SpoqaHanSans'; 
+  font-style: normal; 
+  font-display: swap;
+  font-weight: 400;
+  src: url("font/SpoqaHanSans/SpoqaHanSansNeoR.eot");
+  src: url("font/SpoqaHanSans/SpoqaHanSansNeoR.eot?#iefix") format('embedded-opentype'),
+       url("font/SpoqaHanSans/SpoqaHanSansNeoR.woff2") format('woff2'),
+       url("font/SpoqaHanSans/SpoqaHanSansNeoR.woff") format('woff'), 
+       url("font/SpoqaHanSans/SpoqaHanSansNeoR.ttf") format('truetype'); 
+} 
+@font-face { 
+  font-family:'SpoqaHanSans'; 
+  font-style: normal; 
+  font-display: swap;
+  font-weight: 500;
+  src: url("font/SpoqaHanSans/SpoqaHanSansNeoM.eot");
+  src: url("font/SpoqaHanSans/SpoqaHanSansNeoM.eot?#iefix") format('embedded-opentype'),
+       url("font/SpoqaHanSans/SpoqaHanSansNeoM.woff2") format('woff2'),
+       url("font/SpoqaHanSans/SpoqaHanSansNeoM.woff") format('woff'), 
+       url("font/SpoqaHanSans/SpoqaHanSansNeoM.ttf") format('truetype'); 
+}  
+@font-face { 
+  font-family:'SpoqaHanSans'; 
+  font-style: normal; 
+  font-display: swap;
+  font-weight: 700;
+  src: url("font/SpoqaHanSans/SpoqaHanSansNeoB.eot");
+  src: url("font/SpoqaHanSans/SpoqaHanSansNeoB.eot?#iefix") format('embedded-opentype'),
+       url("font/SpoqaHanSans/SpoqaHanSansNeoB.woff2") format('woff2'),
+       url("font/SpoqaHanSans/SpoqaHanSansNeoB.woff") format('woff'), 
+       url("font/SpoqaHanSans/SpoqaHanSansNeoB.ttf") format('truetype'); 
+}

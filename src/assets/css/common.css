@@ -1,0 +1,540 @@
+.clearfix {
+    content: '';
+    display: block;
+    clear: both;
+}
+:root {
+    --blue-color: #476eff;
+    --inactive-blue-color: #D0DAE6;
+    --text_area-color: #888888;
+}
+
+
+/* common part Start */
+html {
+    font-size: 62.5%; /* 10진법 계산 방식 */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+body {
+    -webkit-text-size-adjust: none;
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    user-select: none;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+}
+img, fieldset {
+    border: 0;
+}
+body, div, p, span, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select, header, footer, main, article, section, aside, label {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+input, textarea, select, button, table, label {
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    border: none;
+    cursor: pointer;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+input {
+    width: 100%;
+    font: 400 2.2rem/3rem 'spoqaHanSans';
+}
+input::placeholder {
+    color: #ccc;
+}
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    flex-direction: column;
+    padding: 2.4rem 2rem 0rem;
+    position: relative;
+    margin-bottom: 2.4rem;
+    background: #fff;
+    overflow: hidden;
+}
+.title_content { 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 6.4rem;
+    margin-bottom: 4rem;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.8rem;
+}
+.text_area {
+    position: relative;
+    height: 6.3rem;
+    margin-bottom: 2.4rem;
+}
+.input_wrap {
+    position: relative;
+    width: 100%;
+    height: 4.2rem;
+    background: transparent;
+}
+/* input box안에 아이콘 넣을 때 사용 */
+.input_wrap>button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.inputRotate + button > img {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.inputRotate:focus + button > img {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.section_divider {
+    width: 100%; height: 8px;
+    background: #f6f6f6;
+    margin: 2.4rem 0;
+}
+.thin_section_divider {
+    width: 100%; height: 0.1rem;
+    background: #eee;
+    margin: 2.4rem 0;
+}
+.upstair_layout {
+    position: relative;
+    background: #fff;
+    z-index: 9;
+}
+.id_number_divider {
+    width: 0.8rem;
+    height: 0.1rem;
+    background: #666;
+    margin: auto 0.6rem;
+}
+.id_number_arrange {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.input_wrap > input + .id_number_arrange .id_number_circle {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #ccc;
+    border-radius: 50%;
+    margin-right: 0.4rem;
+    transition: all 0.2s;
+} 
+.input_wrap > input + .id_number_arrange .id_number_circle:nth-child(6) {
+    margin-right: 0;
+}
+
+.input_wrap > input:focus + .id_number_arrange .id_number_circle {
+    visibility: hidden;
+}
+.accordion_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    flex-direction: column;
+    padding: 0rem 2rem;
+    position: relative;
+    margin-bottom: 18.8rem;
+    background: #fff;
+    border-top: 0.8rem solid #f6f6f6;
+}
+/* common part End */
+
+
+/* radio Start*/
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"] + label {
+    height: 3.2rem;
+}
+input[type="radio"] + label span{
+    display: inline-block;
+    width: 3.2rem;
+    height: 3.2rem;
+    cursor: pointer;
+    background-image: url(../img/controls-radio-32-inactive.png);
+}
+input[type="radio"]:checked + label span{
+    background-image: url(../img/controls-radio-32-radio-only-select.png);
+}
+.radio_section {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex; 
+   flex-direction: column;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+   font: 200 1.4rem/3.2rem 'SpoqaHanSans';
+   height: 7.2rem;
+}
+.id_number_arrange,
+.PeriodShowBtn,
+.radio_arrange {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+}
+/* radio End */
+
+
+/* checkbox function Start */
+input[type="checkbox"] + label {
+    display: block;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin: 0;
+    background: url(../img/controls-check-32-active.png) no-repeat center;
+}
+input[type="checkbox"]:checked + label {
+    background: url(../img/controls-check-32-select.png) no-repeat center;
+}
+/* checkbox function End */
+/* bottom tap Start */
+.bottom_layer {
+    height: 14rem; width: 100%;
+    position: fixed;
+    bottom: 0; left: 0;
+    background: #fff;
+    z-index: 11;
+}
+.bottom_checkbox_layer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 6rem;
+    padding: 1.4rem 2rem;
+    font: 400 1.4rem/3.2rem 'SpoqaHanSans';
+    position: relative;
+    cursor: pointer;
+}
+    
+/* checkbox:checked 텍스트 효과 Start */
+input[type="radio"] ~ .bottom_checkbox_text,
+input[type="checkbox"] ~ .bottom_checkbox_text {
+    margin: 0 auto 0 10px;
+    font: 200 1.4rem/3.2rem 'SpoqaHanSans';
+    color: #000;
+    transition: all 0.4s;
+}
+/* input[type="radio"]:checked ~ .bottom_checkbox_text,
+input[type="checkbox"]:checked ~ .bottom_checkbox_text {
+    color: #000;
+} */
+input[type="checkbox"] ~ .only_bottom_checkbox_text {
+    margin: 0 auto 0 10px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+    color: #000;
+    transition: all 0.4s;
+}
+/* input[type="checkbox"]:checked ~ .only_bottom_checkbox_text {
+    color: #000;
+} */
+/* checkbox:checked 텍스트효과 End */
+
+.btn_confirm,
+.btn_primary {
+    width: 100%;
+    height: 4.8rem;
+    background: #D0DAE6;
+    color: #91A1B2;
+    font: 500 1.6rem/1.6rem 'SpoqaHanSans';
+    border-radius: 0.4rem;
+}
+.btn_confirm:focus,
+.btn_confirm:active,
+.btn_primary:focus,
+.btn_primary:active {
+    background: var(--blue-color);
+    color: #fff;
+}
+.bottom_btn_wrap {
+    padding: 1.6rem;
+}
+.bottom_checkbox_layer>img {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* bottom tap End */
+
+
+input[type="checkbox"] , label[for="radio_icon"] {
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+input[type="text"] {
+    outline: none;
+    height: 4.2rem;
+    border-bottom: 1px solid #eee;
+    transition: all 1s;
+}
+input[type="text"]:focus,
+input[type="text"]:active {
+    border-bottom: 1px solid var(--blue-color);
+}
+.text_area_title {
+    line-height: 1.8rem;
+    color: var(--text_area-color);
+}
+
+
+/* 선택발급 Start */
+.title_paragraph {
+    margin: 2.4rem 0;
+}
+.title_paragraph h2 {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 0.8rem;
+}
+.title_paragraph h3 {
+    font: 200 1.4rem/2.2rem 'SpoqaHanSans';
+}
+.horizontal_arrange>h3:nth-child(2) {
+    margin-left: auto;
+}
+.horizontal_arrange {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.horizontal_arrange img {
+    height: 1.6rem;
+    margin: auto 0;
+}
+.usual_checkbox_layer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    height: 3.2rem;
+    font: 400 1.4rem/3.2rem 'SpoqaHanSans';
+    margin-bottom: 0.8rem;
+}
+section .usual_checkbox_layer:last-child {
+    margin-bottom: 0;
+}
+/* 선택발급 End */
+
+
+/* 서브페이지 Start */
+.subcontainer {
+    background: #fff;
+    height: 100vh; width: 100%;
+    padding: 2.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.subpage_title{
+    margin-bottom: 3.2rem;
+    font: 200 2rem/2.8rem 'SpoqaHanSans';
+}
+.subcontainer .text_area {
+    margin-bottom: auto;
+}
+/* 서브페이지 End */
+
+
+/* Modal property Start */
+.blackOn {
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0; left: 0; 
+    z-index: 10;
+    overflow: hidden;
+}
+.modal_layer {
+    background: #fff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding: 2.4rem 2rem 3.2rem;
+    z-index: 12;
+}
+.modal_title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 3.2rem;
+    font: 700 1.8rem/2.2rem 'SpoqaHanSans';
+}
+.modal_layer input[type="radio"] ~ label {
+    display: block;
+    margin-bottom: 2.4rem;
+    height: 2.2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    box-sizing: border-box;
+}
+.modal_layer input[type="radio"] ~ label:last-child {
+    margin-bottom: 1rem;
+}
+.ModalCloseBtn {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+.modal_layer label,
+.PeriodShowBtn,
+.modal_layer img {
+    cursor: pointer;
+}
+/* Modal property End */
+
+
+/* 직접입력 임시 Modal Start */
+.btn_modal_layer {
+    background: #fff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding: 2.4rem 1.6rem 3.2rem 1.6rem;
+    z-index: 12;
+}
+.btn_modal_inner {
+    padding: 0 0.4rem;
+}
+.btn_modal_title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font: 700 1.8rem/2.2rem 'SpoqaHanSans';
+}
+.btn_modal_input_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    font: 200 2rem/2.8rem 'SpoqaHanSans';
+    margin: 2rem 0;
+}
+.btn_modal_input_wrap p {
+    line-height: 4.2rem;
+}
+.btn_modal_input_wrap input {
+    text-align: center;
+}
+.btn_modal_input_wrap>input {
+    width: 4rem;
+}
+.two_btn_layer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+}
+.btn_back {
+    flex: 1;
+    width: 9.6rem;
+    height: 4.8rem;
+    background: #EFF0F5;
+    border-radius: 0.4rem;
+    color: #494F60;
+    font: 500 1.6rem/1.6rem 'SpoqaHanSans';
+}
+.btn_confirm {
+    flex: 2.3;
+    width: 100%;
+    margin-left: 0.8rem;
+}
+/* 직접입력 임시 Modal End */
+
+
+/*  이해를 돕기위한 허접한 시연입니다. 삭제해주세요. + JS도 삭제해야합니다. */
+.blackOn {
+    display: none; 
+}
+.selection_issue {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(-1000px);
+}
+.selection_issue.on {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transform: translateY(0);
+}
+.NameId1 {
+    display: none;
+}
+.NameId1.on {
+    display: block;
+}
+.NameId2 {
+    display: none;
+}
+.NameId2.on{
+    display: block;
+}
+.direct_selection,
+.btn_modal_layer,
+.institution,
+.target,
+.period {
+    display: none;
+}
+.stop-scroll{
+    height: 100%;
+    overflow: hidden;
+  }
+/* 삭제 */
